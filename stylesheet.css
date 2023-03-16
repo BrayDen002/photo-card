@@ -1,0 +1,20 @@
+body {
+    background-color: gray;
+}
+
+.card {
+    /* using aspect ratio in relation to the size of a standard photo card '3:2' or '4x6' inches*/
+    aspect-ratio: 2 / 3;
+    background-color: black;
+    position: absolute;
+}
+.big-card {
+    width: 30vmin;
+    border-radius: 1vmin; /* Creates roudned edges around the cards*/
+}
+
+.little-card {
+    width: 12vmin;
+    border-radius: 2vmin;
+    background-color: white;
+}
