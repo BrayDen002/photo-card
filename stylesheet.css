@@ -1,12 +1,60 @@
 body {
+    margin: 0px;
     background-color: gray;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+/* created new  wrapper to match the aspect ratio of the cards so that it is actually placed in the middle.*/
+.card-group,
+.card {
+    aspect-ratio: 4 / 5;
+}
+
+/* created new  wrapper to match the width of the cards so that it is actually placed in the middle.*/
+.card-group,
+.big-card {
+    width: 30vmin;
+}
+
+/* when hovering over the cards,  they expand out to reveal the other cards laying under */
+.card-group:hover > .big-card:nth-child(2){
+    transform: translate(-75%, 15%) rotate(-18deg);
+}
+
+.card-group:hover > .big-card:nth-child(4){
+    transform: translate(-25%, 8%) rotate(-7deg);
+}
+
+.card-group:hover > .big-card:nth-child(6){
+    transform: translate(25%, 8%) rotate(7deg);
+}
+
+.card-group:hover > .big-card:nth-child(8){
+    transform: translate(75%, 15%) rotate(18deg);
+}
+
+.card-group:hover > .little-card:nth-child(1){
+    transform: translate(210%, -160%) rotate(-15deg);
+}
+.card-group:hover > .little-card:nth-child(3){
+    transform: translate(160%, 170%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(5){
+    transform: translate(-240%, -170%) rotate(15deg);
+}
+.card-group:hover > .little-card:nth-child(7){
+    transform: translate(-290%, 140%) rotate(-15deg);
 }
 
 .card {
-    /* using aspect ratio in relation to the size of a standard photo card '3:2' or '4x6' inches*/
-    aspect-ratio: 2 / 3;
+    /* using aspect ratio in relation to the size of a standard photo card '3:2' or '4x6' inches. A polaroid photo card is: 3.4 x 4.2 inches*/
+    aspect-ratio: 4 / 5;
     background-color: black;
     position: absolute;
+    /* went to cubic-bezier.com to configure a transform time that is fast when initially hovered over and slows down */
+    transition: transform 0.8s cubic-bezier(.08,.79,.32,.87);
 }
 .big-card {
     width: 30vmin;
@@ -17,4 +65,54 @@ body {
     width: 12vmin;
     border-radius: 2vmin;
     background-color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* creating individual big cards that are offset from one another to give a stacked effect using transform and rotate. */
+/* alternating the numbers since the hover affect and how divs are set up in the 'interestCards.html' file are set up. It will affect the first card in the div 
+which is a little card and not a big card like we want */
+.big-card:nth-child(2) {
+    /* add on click to enlarge each image, add zoom in affect for style */
+    background-image: url(images/image0.jpg);
+    background-size:  cover; /* shrinks image to smallest size so that it fits inside the card*/
+    background-position: center center; /* centers the image */
+    transform: translateX(-10%) rotate(-1deg);
+}
+.big-card:nth-child(4) {
+    background-image: url(images/oreo.JPEG);
+    background-size:  contain; /* using contatin because the photo doesn't fully fit using cover*/
+    background-repeat: no-repeat; /* since there is empty space due to the aspect ratio of the picture and the use of contain the image repeats. however this stops that*/
+    background-position: center center;
+    transform: rotate(2deg);
+}
+.big-card:nth-child(6) {
+    background-image: url(images/kitten.jpg);
+    background-size:  contain;
+    background-repeat: no-repeat;
+
+    background-position: center center;
+    transform: translateX(-6%) rotate(-3deg);
+}
+.big-card:nth-child(8) {
+    background-image: url(images/braden.jpg);
+    background-size:  cover;
+    background-position: center center;
+    transform: translate(-10%, 3%) rotate(5deg);
+}
+
+.little-card:nth-child(1){
+    background-size:  cover;
+    background-position: center center;
+    background-image: url(images/maple.jpg);
+}
+.little-card:nth-child(3){
+
+}
+.little-card:nth-child(5){
+
+}
+.little-card:nth-child(7){
+
 }
