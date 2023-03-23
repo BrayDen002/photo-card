@@ -70,6 +70,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
+/* .big-card:click .big-card:nth-child(8),
+.big-card:focus .big-card:nth-child(8) {
+    transform: scale(1.2);
+} */
+
 /* creating individual big cards that are offset from one another to give a stacked effect using transform and rotate. */
 /* alternating the numbers since the hover affect and how divs are set up in the 'interestCards.html' file are set up. It will affect the first card in the div 
 which is a little card and not a big card like we want */
@@ -88,11 +93,11 @@ which is a little card and not a big card like we want */
     transform: rotate(2deg);
 }
 .big-card:nth-child(6) {
-    background-image: url(images/kitten.jpg);
-    background-size:  contain;
+    /* background-image: url(images/kitten.jpg); */
+    /* background-size:  contain; */
     background-repeat: no-repeat;
 
-    background-position: center center;
+    /* background-position: center center; */
     transform: translateX(-6%) rotate(-3deg);
 }
 .big-card:nth-child(8) {
@@ -108,11 +113,72 @@ which is a little card and not a big card like we want */
     background-image: url(images/maple.jpg);
 }
 .little-card:nth-child(3){
-
+    background-size:  cover;
+    background-position: center center;
+    background-image: url(images/maple.jpg);
 }
 .little-card:nth-child(5){
-
+    background-size:  cover;
+    background-position: center center;
+    background-image: url(images/maple.jpg);
 }
 .little-card:nth-child(7){
-
+    background-size:  cover;
+    background-position: center center;
+    background-image: url(images/maple.jpg);
 }
+
+.big-card:target+.close{
+    display: block;
+}
+
+.big-card:target+.close+.expand{
+    display: none;
+}
+.close {
+    background-image: url(images/maple.jpg);
+    background-repeat: no-repeat;
+    bottom: 418px;
+    display: none;
+    height: 32px;
+    left: 462px;
+    margin-top: -32px;  
+    position: relative;
+    width: 32px;
+  }
+.expand{
+  bottom: 125px;
+  margin-left: -32px;
+  margin-right: 16px;
+  pointer-events: none;
+  position: relative;
+}
+
+.big-card input[type=checkbox] {
+  display: none;
+}
+
+ .big-card img{
+  transition: transform 0.25s ease;
+  cursor: zoom-in;
+} 
+
+.big-card input[type=checkbox]:checked~img{
+  margin: 200px;
+  transform: scale(2);
+  cursor: zoom-in;
+}
+
+/* #fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+  } */
