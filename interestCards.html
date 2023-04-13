@@ -14,21 +14,22 @@
         <div class="little-card card">
     
         </div>
-        <div class="big-card card" onclick="change(this)">
+        
+        <div class="big-card card"> <!--onclick="change(this)"-->
             <!-- <input type="checkbox" id="zoomCheck"> -->
         </div>
 
         <div class="little-card card" >
     
         </div>
-        <div class="big-card card" onclick="change(this)">
+        <div class="big-card card">
             <!-- <input type="checkbox" id="zoomCheck"> -->
         </div>
 
         <div class="little-card card">
     
         </div>
-        <div class="big-card card" onclick="change(this)">
+        <div class="big-card card">
             
            
         </div>
@@ -36,15 +37,33 @@
         <div class="little-card card">
     
         </div>
-        <div class="big-card card" onclick="change(this)">
+        <div class="big-card card">
 
             <!-- Code for zoom on click. Design is not suited well for this type of photo interactivity -->
             <!-- <label for="zoomCheck">
                 <img class="img" src=http://icons.iconarchive.com/icons/icons8/ios7/16/Editing-Expand-icon.png />
             </label> -->
         </div>
-        
+        <div class="card-swiper">
+            <div class="card-groups">
+                <div class="card-group" data-index="0" data-status="active"></div>
+                <div class="card-group" data-index="1" data-status="unknown"></div>
+                <div class="card-group" data-index="2" data-status="unknown"></div>
+    
+            </div>
+            <div class="card-swiper-buttons">
+                <button id="left-button" onclick="handleLeftSwipe">
+                    <i class="&#8249;"></i>
+                </button>
+                <button id="right-button" onclick="handleRightSwipe">
+    
+                </button>
+    
+            </div>
+    
         </div>
+        </div>
+        
     </div>
 </body>
 </html>

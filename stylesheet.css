@@ -7,16 +7,26 @@ body {
 }
 
 /* created new  wrapper to match the aspect ratio of the cards so that it is actually placed in the middle.*/
+.card-groups,
 .card-group,
 .card {
     aspect-ratio: 4 / 5;
 }
 
 /* created new  wrapper to match the width of the cards so that it is actually placed in the middle.*/
+.card-groups,
 .card-group,
 .big-card {
     width: 30vmin;
 }
+
+.card-group{
+    position: absolute;
+}
+
+/* .card-group[data-status="unknown"] {
+    transform: scale(0);
+} */
 
 /* when hovering over the cards,  they expand out to reveal the other cards laying under */
 .card-group:hover > .big-card:nth-child(2){
