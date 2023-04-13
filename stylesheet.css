@@ -93,11 +93,11 @@ which is a little card and not a big card like we want */
     transform: rotate(2deg);
 }
 .big-card:nth-child(6) {
-    /* background-image: url(images/kitten.jpg); */
-    /* background-size:  contain; */
+    background-image: url(images/kitten.jpg);
+    background-size:  contain;
     background-repeat: no-repeat;
 
-    /* background-position: center center; */
+    background-position: center center;
     transform: translateX(-6%) rotate(-3deg);
 }
 .big-card:nth-child(8) {
@@ -128,81 +128,14 @@ which is a little card and not a big card like we want */
     background-image: url(images/maple.jpg);
 }
 
-.img {
+
+/* Code for zoom on click. Design is not suited well for this type of photo interactivity */
+/* .img {
     cursor: zoom-in;
 }
+ */
 
-/* .img:target+.close{
-    display: block;
-}
-
-.img:target+.close+.expand{
-    display: none;
-}
-.close {
-    background-image: url(images/maple.jpg);
-    background-repeat: no-repeat;
-    bottom: 418px;
-    display: none;
-    height: 32px;
-    left: 462px;
-    margin-top: -32px;  
-    position: relative;
-    width: 32px;
-  }
-.expand{
-  bottom: 125px;
-  margin-left: -32px;
-  margin-right: 16px;
-  pointer-events: none;
-  position: relative;
-} */
-/* 
-.thumbnail{
-    max-width: 100%;
-    cursor: zoom-in;
-
-}
-
-.zoomIn{
-    display: none;
-    position: fixed;
-    z-index: 999;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    top: 0;
-    left: 0;
-    background: black;
-}
-
-.zoomIn img{
-    max-width: 90%;
-    max-height: 80%;
-    cursor: zoom-out;
-}
-
-.zoomIn:target{
-    outline: none;
-    display: block;
-} */
-
-/* .big-card input[type=checkbox] {
-  display: none;
-}
-
- .big-card img{
-  /* transition: transform 0.25s ease; */
-  /* cursor: zoom-in;
-} 
-
-.big-card input[type=checkbox]:checked ~ img{
-  margin: 200px;
-  transform: scale(2);
-  cursor: zoom-in;
-}  */
-
-.fullsize {
+/* .fullsize {
     border: 5px solid white;
     cursor: zoom-out;
     display: block;
@@ -216,8 +149,5 @@ which is a little card and not a big card like we want */
   transition: transform 0.25s ease;
   background: black;
 
-    /* background-size: contain;
-    background-repeat: no-repeat no-repeat;
-    background-position: center center;
-    background-color: black; */
-  }
+
+  } */
